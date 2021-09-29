@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $comando = $bd->prepare('UPDATE generos SET nome = :nome WHERE id = :id');
     $comando->execute([':nome' => $_POST['nome'], ':id' => $_POST['id']]);
 
-    header('Locantion:/index.php');
+    header('Location:/index.php');
 }
 
 ?>
