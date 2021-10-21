@@ -19,21 +19,22 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     header('Location:/index.php');
 }
 
+$_title = 'Editar Gênero';
+
 ?>
 
-<!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <title>Editar Gênero</title>
-    </head>
-    <body>
+<?php include('./includes/header.php') ?>
+
         <h1>Editar Gênero</h1>
         <form action="update.php" method="post">
-            <input type="hidden" name="id" value="<?= $genero['id'] ?>"
-            <label for="nome">Nome do Gênero</label>
-            <input type="text" required name="nome" value="<?= $genero['nome'] ?>" />
-            <button type="submit">Salvar</button>
+            <input type="hidden" name="id" value="<?= $genero['id'] ?>" />
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input class="form-control" type="text" name="nome" value="<?= $genero['nome'] ?>" />
+            </div>
+            <br />
+            <a class="btn btn-secondary" href="index.php">Voltar</a>
+            <button class="bts btn-sucess" type="submit">Salvar</button>
         </form>
-   </body>
-</html>
+
+<?php include('./includes/footer.php') ?>      
