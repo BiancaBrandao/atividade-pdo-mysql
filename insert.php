@@ -25,7 +25,7 @@ $_title = 'Novo Gênero';
                     <input class="form-control" type="text" name="nome" />
                 </div>
                 <br />
-                <a class="btn btn-secondary" href="index.php">>Voltar</a>
+                <a class="btn btn-secondary" href="index.php">Voltar</a>
                 <button class="btn btn-success" type="submit">Salvar</button>
             </form>
         
